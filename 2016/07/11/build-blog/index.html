@@ -1,619 +1,422 @@
-<!doctype html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    <meta charset="utf-8">
     
+    <title>搭建好了博客 | Wwh&#39;s World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+        <meta name="keywords" content="" />
     
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
-
-
-
-
-
-
-<meta name="description" content="总有那样的一瞬间，心里头有无限的思绪。最近碰上毕业，又加上一些糟心的事情，有点想写一些东西，又很久没用空间了，想了想就自己搭一个博客好了。以后想写一些什么东西的时候应该都写在这上面了。所以问题就来了，写什么东西呢。好吧，想起一些就加一个分类好了，暂定的分类如下。">
+    <meta name="description" content="&amp;#x603B;&amp;#x6709;&amp;#x90A3;&amp;#x6837;&amp;#x7684;&amp;#x4E00;&amp;#x77AC;&amp;#x95F4;&amp;#xFF0C;&amp;#x5FC3;&amp;#x91CC;&amp;#x5934;&amp;#x6709;&amp;#x65E0;&amp;#x9650;&amp;#x7684;&amp;#x601D;&amp;#x7EEA;&amp;#x3002;&amp;#x6700;&amp;#x8FD1;&amp;#x78B0;&amp;#x4E0A;&amp;#x6BD5;&amp;#x4E1A;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建好了博客">
 <meta property="og:url" content="http://wuweihong.me/2016/07/11/build-blog/index.html">
 <meta property="og:site_name" content="Wwh's World">
-<meta property="og:description" content="总有那样的一瞬间，心里头有无限的思绪。最近碰上毕业，又加上一些糟心的事情，有点想写一些东西，又很久没用空间了，想了想就自己搭一个博客好了。以后想写一些什么东西的时候应该都写在这上面了。所以问题就来了，写什么东西呢。好吧，想起一些就加一个分类好了，暂定的分类如下。">
-<meta property="og:updated_time" content="2016-07-12T04:23:36.437Z">
+<meta property="og:description" content="&amp;#x603B;&amp;#x6709;&amp;#x90A3;&amp;#x6837;&amp;#x7684;&amp;#x4E00;&amp;#x77AC;&amp;#x95F4;&amp;#xFF0C;&amp;#x5FC3;&amp;#x91CC;&amp;#x5934;&amp;#x6709;&amp;#x65E0;&amp;#x9650;&amp;#x7684;&amp;#x601D;&amp;#x7EEA;&amp;#x3002;&amp;#x6700;&amp;#x8FD1;&amp;#x78B0;&amp;#x4E0A;&amp;#x6BD5;&amp;#x4E1A;">
+<meta property="og:image" content="http://oa6ukhh45.bkt.clouddn.com/16-7-12/952623.jpg">
+<meta property="og:updated_time" content="2016-07-12T06:15:24.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建好了博客">
-<meta name="twitter:description" content="总有那样的一瞬间，心里头有无限的思绪。最近碰上毕业，又加上一些糟心的事情，有点想写一些东西，又很久没用空间了，想了想就自己搭一个博客好了。以后想写一些什么东西的时候应该都写在这上面了。所以问题就来了，写什么东西呢。好吧，想起一些就加一个分类好了，暂定的分类如下。">
+<meta name="twitter:description" content="&amp;#x603B;&amp;#x6709;&amp;#x90A3;&amp;#x6837;&amp;#x7684;&amp;#x4E00;&amp;#x77AC;&amp;#x95F4;&amp;#xFF0C;&amp;#x5FC3;&amp;#x91CC;&amp;#x5934;&amp;#x6709;&amp;#x65E0;&amp;#x9650;&amp;#x7684;&amp;#x601D;&amp;#x7EEA;&amp;#x3002;&amp;#x6700;&amp;#x8FD1;&amp;#x78B0;&amp;#x4E0A;&amp;#x6BD5;&amp;#x4E1A;">
+<meta name="twitter:image" content="http://oa6ukhh45.bkt.clouddn.com/16-7-12/952623.jpg">
+    
 
+    
 
+    
+        <link rel="icon" href="/images/favicon.ico" />
+    
 
-<script type="text/javascript" id="hexo.configuration">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post"},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: 0,
-      author: '博主'
-    }
-  };
-</script>
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
 
+    <link rel="stylesheet" href="/css/style.css">
 
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+    
 
-
-  <link rel="canonical" href="http://wuweihong.me/2016/07/11/build-blog/"/>
-
-  <title> 搭建好了博客 | Wwh's World </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">思行合一</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/杂/">杂</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/guestbook">留言</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
 
-  
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Wwh's World</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">思行合一</p>
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
 </div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
 </div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-guestbook">
-          <a href="/guestbook" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
-            
-            留言
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                搭建好了博客
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-11T12:21:06+08:00" content="2016-07-11">
-              2016-07-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/杂/" itemprop="url" rel="index">
-                    <span itemprop="name">杂</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/11/build-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/11/build-blog/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>总有那样的一瞬间，心里头有无限的思绪。最近碰上毕业，又加上一些糟心的事情，有点想写一些东西，又很久没用空间了，想了想就自己搭一个博客好了。以后想写一些什么东西的时候应该都写在这上面了。所以问题就来了，写什么东西呢。好吧，想起一些就加一个分类好了，暂定的分类如下。<br><a id="more"></a></p>
-<h2 id="个人看法"><a href="#个人看法" class="headerlink" title="个人看法"></a>个人看法</h2><p>主要写是自己的一些三观之类的，对于世界的一些宏观的看法。嗯，应该会很虚。尽量避免假大空好了。</p>
-<h2 id="事件看法"><a href="#事件看法" class="headerlink" title="事件看法"></a>事件看法</h2><p>好像我从来没有在社交网络上发表过对于某些事件的看法之类的，现在可能会写一点，一家之言而已。</p>
-<h2 id="生活感悟"><a href="#生活感悟" class="headerlink" title="生活感悟"></a>生活感悟</h2><p>应该这一部分会比较多吧，发生了什么事情，有什么影响、感悟之类的。又或者是矫情了之后想写点啥之类的。</p>
-<h2 id="技术分享"><a href="#技术分享" class="headerlink" title="技术分享"></a>技术分享</h2><p>从来没写过，技术水平不够拿什么写。某一天说不定就写了。</p>
-<h2 id="副标题"><a href="#副标题" class="headerlink" title="副标题"></a>副标题</h2><p>思行合一。想法来自于ThinkPad，意思同字面一样，想到的就要去做到。后面会详细写吧。</p>
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/07/11/build-blog/"
-           data-title="搭建好了博客" data-url="http://wuweihong.me/2016/07/11/build-blog/">
-      </div>
-    
-  </div>
-
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/img.jpg"
-               alt="Wwh" />
-          <p class="site-author-name" itemprop="name">Wwh</p>
-          <p class="site-description motion-element" itemprop="description">矫情的空间</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
-
-          
-            <div class="site-state-item site-state-categories">
-              <a href="/categories">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
+                        </nav>
+                    </div>
+                </div>
             </div>
-          
-
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/u/5171270903/home?wvr=5" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                  Weibo
-                </a>
-              </span>
-            
-          
         </div>
-
-        
-        
-
-        
-        
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#个人看法"><span class="nav-number">1.</span> <span class="nav-text">个人看法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件看法"><span class="nav-number">2.</span> <span class="nav-text">事件看法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生活感悟"><span class="nav-number">3.</span> <span class="nav-text">生活感悟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技术分享"><span class="nav-number">4.</span> <span class="nav-text">技术分享</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#副标题"><span class="nav-number">5.</span> <span class="nav-text">副标题</span></a></li></ol></div>
-            
-          </div>
-        </section>
-      
-
     </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Wwh</span>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/杂/">杂</a>
+    </h1>
 </div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
-
+                        <div class="main-body-content">
+                            <article id="post-build-blog" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        搭建好了博客
+        </h1>
+    
 
+            </header>
         
-      </div>
-    </footer>
+        
+            <div class="article-subtitle">
+                <a href="/2016/07/11/build-blog/" class="article-date">
+    <time datetime="2016-07-11T04:21:06.059Z" itemprop="datePublished">2016-07-11</time>
+</a>
+                
+            </div>
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="http://oa6ukhh45.bkt.clouddn.com/16-7-12/952623.jpg" alt=""><br>&#x603B;&#x6709;&#x90A3;&#x6837;&#x7684;&#x4E00;&#x77AC;&#x95F4;&#xFF0C;&#x5FC3;&#x91CC;&#x5934;&#x6709;&#x65E0;&#x9650;&#x7684;&#x601D;&#x7EEA;&#x3002;&#x6700;&#x8FD1;&#x78B0;&#x4E0A;&#x6BD5;&#x4E1A;&#xFF0C;&#x53C8;&#x52A0;&#x4E0A;&#x4E00;&#x4E9B;&#x7CDF;&#x5FC3;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x6709;&#x70B9;&#x60F3;&#x5199;&#x4E00;&#x4E9B;&#x4E1C;&#x897F;&#xFF0C;&#x53C8;&#x5F88;&#x4E45;&#x6CA1;&#x7528;&#x7A7A;&#x95F4;&#x4E86;&#xFF0C;&#x60F3;&#x4E86;&#x60F3;&#x5C31;&#x81EA;&#x5DF1;&#x642D;&#x4E00;&#x4E2A;&#x535A;&#x5BA2;&#x597D;&#x4E86;&#x3002;&#x4EE5;&#x540E;&#x60F3;&#x5199;&#x4E00;&#x4E9B;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#x7684;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x90FD;&#x5199;&#x5728;&#x8FD9;&#x4E0A;&#x9762;&#x4E86;&#x3002;&#x6240;&#x4EE5;&#x95EE;&#x9898;&#x5C31;&#x6765;&#x4E86;&#xFF0C;&#x5199;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;&#x5462;&#x3002;&#x597D;&#x5427;&#xFF0C;&#x60F3;&#x8D77;&#x4E00;&#x4E9B;&#x5C31;&#x52A0;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x597D;&#x4E86;&#xFF0C;&#x6682;&#x5B9A;&#x7684;&#x5206;&#x7C7B;&#x5982;&#x4E0B;&#x3002;<br><a id="more"></a></p>
+<h2 id="&#x4E2A;&#x4EBA;&#x770B;&#x6CD5;"><a href="#&#x4E2A;&#x4EBA;&#x770B;&#x6CD5;" class="headerlink" title="&#x4E2A;&#x4EBA;&#x770B;&#x6CD5;"></a>&#x4E2A;&#x4EBA;&#x770B;&#x6CD5;</h2><p>&#x4E3B;&#x8981;&#x5199;&#x662F;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x4E09;&#x89C2;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E16;&#x754C;&#x7684;&#x4E00;&#x4E9B;&#x5B8F;&#x89C2;&#x7684;&#x770B;&#x6CD5;&#x3002;&#x55EF;&#xFF0C;&#x5E94;&#x8BE5;&#x4F1A;&#x5F88;&#x865A;&#x3002;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5047;&#x5927;&#x7A7A;&#x597D;&#x4E86;&#x3002;</p>
+<h2 id="&#x4E8B;&#x4EF6;&#x770B;&#x6CD5;"><a href="#&#x4E8B;&#x4EF6;&#x770B;&#x6CD5;" class="headerlink" title="&#x4E8B;&#x4EF6;&#x770B;&#x6CD5;"></a>&#x4E8B;&#x4EF6;&#x770B;&#x6CD5;</h2><p>&#x597D;&#x50CF;&#x6211;&#x4ECE;&#x6765;&#x6CA1;&#x6709;&#x5728;&#x793E;&#x4EA4;&#x7F51;&#x7EDC;&#x4E0A;&#x53D1;&#x8868;&#x8FC7;&#x5BF9;&#x4E8E;&#x67D0;&#x4E9B;&#x4E8B;&#x4EF6;&#x7684;&#x770B;&#x6CD5;&#x4E4B;&#x7C7B;&#x7684;&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x80FD;&#x4F1A;&#x5199;&#x4E00;&#x70B9;&#xFF0C;&#x4E00;&#x5BB6;&#x4E4B;&#x8A00;&#x800C;&#x5DF2;&#x3002;</p>
+<h2 id="&#x751F;&#x6D3B;&#x611F;&#x609F;"><a href="#&#x751F;&#x6D3B;&#x611F;&#x609F;" class="headerlink" title="&#x751F;&#x6D3B;&#x611F;&#x609F;"></a>&#x751F;&#x6D3B;&#x611F;&#x609F;</h2><p>&#x5E94;&#x8BE5;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x4F1A;&#x6BD4;&#x8F83;&#x591A;&#x5427;&#xFF0C;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#xFF0C;&#x6709;&#x4EC0;&#x4E48;&#x5F71;&#x54CD;&#x3001;&#x611F;&#x609F;&#x4E4B;&#x7C7B;&#x7684;&#x3002;&#x53C8;&#x6216;&#x8005;&#x662F;&#x77EB;&#x60C5;&#x4E86;&#x4E4B;&#x540E;&#x60F3;&#x5199;&#x70B9;&#x5565;&#x4E4B;&#x7C7B;&#x7684;&#x3002;</p>
+<h2 id="&#x6280;&#x672F;&#x5206;&#x4EAB;"><a href="#&#x6280;&#x672F;&#x5206;&#x4EAB;" class="headerlink" title="&#x6280;&#x672F;&#x5206;&#x4EAB;"></a>&#x6280;&#x672F;&#x5206;&#x4EAB;</h2><p>&#x4ECE;&#x6765;&#x6CA1;&#x5199;&#x8FC7;&#xFF0C;&#x6280;&#x672F;&#x6C34;&#x5E73;&#x4E0D;&#x591F;&#x62FF;&#x4EC0;&#x4E48;&#x5199;&#x3002;&#x67D0;&#x4E00;&#x5929;&#x8BF4;&#x4E0D;&#x5B9A;&#x5C31;&#x5199;&#x4E86;&#x3002;</p>
+<h2 id="&#x526F;&#x6807;&#x9898;"><a href="#&#x526F;&#x6807;&#x9898;" class="headerlink" title="&#x526F;&#x6807;&#x9898;"></a>&#x526F;&#x6807;&#x9898;</h2><p>&#x601D;&#x884C;&#x5408;&#x4E00;&#x3002;&#x60F3;&#x6CD5;&#x6765;&#x81EA;&#x4E8E;ThinkPad&#xFF0C;&#x610F;&#x601D;&#x540C;&#x5B57;&#x9762;&#x4E00;&#x6837;&#xFF0C;&#x60F3;&#x5230;&#x7684;&#x5C31;&#x8981;&#x53BB;&#x505A;&#x5230;&#x3002;&#x540E;&#x9762;&#x4F1A;&#x8BE6;&#x7EC6;&#x5199;&#x5427;&#x3002;</p>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
-  </div>
+        </div>
+        <footer class="article-footer">
+            
 
-  
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+
+    <a data-url="http://wuweihong.me/2016/07/11/build-blog/" data-id="ciqizzfdu000070r4omkx3ncs" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
 </script>
 
+        </footer>
+    </div>
+</article>
 
-
-
-
-
-
-
-
-  
-
-
-
-  
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
-
-
-
-  
-
-  
+    <section id="comments">
     
-  
+        
+    <div class="ds-thread" data-thread-key="2016/07/11/build-blog/" data-title="搭建好了博客" data-url="http://wuweihong.me/2016/07/11/build-blog/"></div>
+    <style>
+        #ds-thread #ds-reset .ds-textarea-wrapper {
+            background: none;
+        }
+        #ds-reset .ds-avatar img {
+            box-shadow: none;
+        }
+        #ds-reset .ds-gradient-bg {
+            background: #f7f7f7;
+        }
+        #ds-thread #ds-reset li.ds-tab a {
+            border-radius: 3px;
+        }
+        #ds-thread #ds-reset .ds-post-button {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background: #d32;
+            text-shadow: none;
+            font-weight: normal;
+            font-family: 'Microsoft Yahei';
+        }
+        #ds-thread #ds-reset .ds-post-button:hover {
+            color: white;
+            background: #DE594C;
+        }
+        #ds-thread #ds-reset .ds-post-button:active {
+            background: #d32;
+        }
+        #ds-smilies-tooltip ul.ds-smilies-tabs li a.ds-current {
+            color: white;
+            background: #d32;
+            box-shadow: none;
+            text-shadow: none;
+            font-weight: normal;
+        }
+    </style>
 
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"wuweihong"};
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/Laraltair" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="http://weibo.com/u/5171270903/home?wvr=5" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/07/11/build-blog/" class="thumbnail">
+    
+    
+        <span style="background-image:url(http://oa6ukhh45.bkt.clouddn.com/16-7-12/952623.jpg)" alt="搭建好了博客" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/杂/">杂</a></p>
+                            <p class="item-title"><a href="/2016/07/11/build-blog/" class="title">搭建好了博客</a></p>
+                            <p class="item-date"><time datetime="2016-07-11T04:21:06.059Z" itemprop="datePublished">2016-07-11</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+
+            
+                
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2016 Wwh</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'wuweihong'};
     (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
-  </script>
+    </script>
 
-  
+
+
     
-    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
-  
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
 
 
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
 
-
-
-
-  
-  
-
-  
-
-  
-
-  
-
+    </div>
 </body>
 </html>
